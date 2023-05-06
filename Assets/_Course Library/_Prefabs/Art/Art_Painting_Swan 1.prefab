@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2814897314987958482}
   - component: {fileID: 4549926671880851983}
   m_Layer: 0
-  m_Name: Art_Painting_Swan
+  m_Name: Art_Painting_Swan 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
