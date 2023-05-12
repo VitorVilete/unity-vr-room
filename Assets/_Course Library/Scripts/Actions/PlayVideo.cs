@@ -19,6 +19,7 @@ public class PlayVideo : MonoBehaviour
 
     private VideoPlayer videoPlayer = null;
     private MeshRenderer meshRenderer = null;
+    private AudioSource audioSource = null;
 
     private int index = 0;
 
@@ -26,6 +27,8 @@ public class PlayVideo : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
         videoPlayer = GetComponent<VideoPlayer>();
+        audioSource = GetComponent<AudioSource>();
+        videoPlayer.SetTargetAudioSource(0, audioSource);
 
         if (videoClips.Count > 0)
             videoPlayer.clip = videoClips[0];
@@ -103,6 +106,7 @@ public class PlayVideo : MonoBehaviour
 
     public void TogglePlayPause()
     {
+        videoMaterial.color = Color.white;
         if (videoPlayer.isPlaying)
             videoPlayer.Pause();
         else
